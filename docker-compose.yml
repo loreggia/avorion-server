@@ -1,0 +1,21 @@
+services:
+  server:
+    build:
+      context: .
+    environment:
+      ADMIN: "76561197969753883"
+      SERVER_NAME: "Uagadugli Space Pirates"
+      COLLISION_DAMAGE: "0.25"
+    ports:
+      - 27000:27000
+      - 27003:27003/udp
+      - 27020:27020/udp
+      - 27021:27021/udp
+    volumes:
+      - game:/var/steam
+      - data:/data
+    restart: always
+
+volumes:
+  game:
+  data:
