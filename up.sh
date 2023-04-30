@@ -1,1 +1,1 @@
-docker compose -p avorion-server up --pull always --build
+docker compose -p avorion-server up --pull always --build --detach
